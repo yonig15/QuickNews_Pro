@@ -1,0 +1,17 @@
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\bin\Debug\net7.0\QuickNews.Model.deps.json
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\bin\Debug\net7.0\QuickNews.Model.runtimeconfig.json
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\bin\Debug\net7.0\QuickNews.Model.dll
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\bin\Debug\net7.0\QuickNews.Model.pdb
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\bin\Debug\net7.0\QuickNews.Utilities.dll
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\bin\Debug\net7.0\QuickNews.Utilities.pdb
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\obj\Debug\net7.0\QuickNews.Model.csproj.AssemblyReference.cache
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\obj\Debug\net7.0\QuickNews.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\obj\Debug\net7.0\QuickNews.Model.AssemblyInfoInputs.cache
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\obj\Debug\net7.0\QuickNews.Model.AssemblyInfo.cs
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\obj\Debug\net7.0\QuickNews.Model.csproj.CoreCompileInputs.cache
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\obj\Debug\net7.0\QuickNews.Model.csproj.CopyComplete
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\obj\Debug\net7.0\QuickNews.Model.dll
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\obj\Debug\net7.0\refint\QuickNews.Model.dll
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\obj\Debug\net7.0\QuickNews.Model.pdb
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\obj\Debug\net7.0\QuickNews.Model.genruntimeconfig.cache
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Model\obj\Debug\net7.0\ref\QuickNews.Model.dll

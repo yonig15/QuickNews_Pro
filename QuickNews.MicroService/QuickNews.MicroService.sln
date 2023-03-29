@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickNews.MicroService", "QuickNews.MicroService\QuickNews.MicroService.csproj", "{6B9E8546-B2C4-4229-8D9D-324E8AE1AAB6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickNews.Dal", "QuickNews.Dal\QuickNews.Dal.csproj", "{CC2E1AE2-5B81-4253-81C5-E62A0A1123E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickNews.Model", "QuickNews.Model\QuickNews.Model.csproj", "{0BCCD86D-6C34-4076-BFFD-AB6F71CE4AD1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickNews.Entities", "QuickNews.Entities\QuickNews.Entities.csproj", "{EFF017E1-7821-4899-A159-EAB3C337A5D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickNews.Utilities", "QuickNews.Utilities\QuickNews.Utilities.csproj", "{8BE60BAB-A7D9-4FD5-8957-73313E9B6FD1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickNews.EntitiesTest", "QuickNews.EntitiesTest\QuickNews.EntitiesTest.csproj", "{666DABF3-593D-4C1D-8A25-C0DB7069C023}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B9E8546-B2C4-4229-8D9D-324E8AE1AAB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B9E8546-B2C4-4229-8D9D-324E8AE1AAB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B9E8546-B2C4-4229-8D9D-324E8AE1AAB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B9E8546-B2C4-4229-8D9D-324E8AE1AAB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC2E1AE2-5B81-4253-81C5-E62A0A1123E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2E1AE2-5B81-4253-81C5-E62A0A1123E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2E1AE2-5B81-4253-81C5-E62A0A1123E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2E1AE2-5B81-4253-81C5-E62A0A1123E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BCCD86D-6C34-4076-BFFD-AB6F71CE4AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BCCD86D-6C34-4076-BFFD-AB6F71CE4AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BCCD86D-6C34-4076-BFFD-AB6F71CE4AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BCCD86D-6C34-4076-BFFD-AB6F71CE4AD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFF017E1-7821-4899-A159-EAB3C337A5D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF017E1-7821-4899-A159-EAB3C337A5D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF017E1-7821-4899-A159-EAB3C337A5D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF017E1-7821-4899-A159-EAB3C337A5D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BE60BAB-A7D9-4FD5-8957-73313E9B6FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE60BAB-A7D9-4FD5-8957-73313E9B6FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE60BAB-A7D9-4FD5-8957-73313E9B6FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE60BAB-A7D9-4FD5-8957-73313E9B6FD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{666DABF3-593D-4C1D-8A25-C0DB7069C023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{666DABF3-593D-4C1D-8A25-C0DB7069C023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{666DABF3-593D-4C1D-8A25-C0DB7069C023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{666DABF3-593D-4C1D-8A25-C0DB7069C023}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D59C92EC-36B9-451F-91A9-A04166250A1C}
+	EndGlobalSection
+EndGlobal

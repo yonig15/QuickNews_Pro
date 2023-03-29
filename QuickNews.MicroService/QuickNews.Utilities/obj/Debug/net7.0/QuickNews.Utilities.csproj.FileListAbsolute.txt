@@ -1,0 +1,14 @@
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\bin\Debug\net7.0\QuickNews.Utilities.deps.json
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\bin\Debug\net7.0\QuickNews.Utilities.runtimeconfig.json
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\bin\Debug\net7.0\QuickNews.Utilities.dll
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\bin\Debug\net7.0\QuickNews.Utilities.pdb
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\obj\Debug\net7.0\QuickNews.Utilities.csproj.AssemblyReference.cache
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\obj\Debug\net7.0\QuickNews.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\obj\Debug\net7.0\QuickNews.Utilities.AssemblyInfoInputs.cache
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\obj\Debug\net7.0\QuickNews.Utilities.AssemblyInfo.cs
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\obj\Debug\net7.0\QuickNews.Utilities.csproj.CoreCompileInputs.cache
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\obj\Debug\net7.0\QuickNews.Utilities.dll
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\obj\Debug\net7.0\refint\QuickNews.Utilities.dll
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\obj\Debug\net7.0\QuickNews.Utilities.pdb
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\obj\Debug\net7.0\QuickNews.Utilities.genruntimeconfig.cache
+C:\level-up\Semester C\News_project\QuickNews.MicroService\QuickNews.Utilities\obj\Debug\net7.0\ref\QuickNews.Utilities.dll

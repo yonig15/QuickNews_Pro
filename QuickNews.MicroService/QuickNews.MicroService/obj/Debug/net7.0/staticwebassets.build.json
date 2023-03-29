@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Zc4Ov1gZxgqZkZLhOl9AVSdxVGvrsq5iDrMuZi++X5Q=",
+  "Source": "QuickNews.MicroService",
+  "BasePath": "_content/QuickNews.MicroService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

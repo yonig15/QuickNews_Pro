@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\QuickNews.MicroService.props" />
+</Project>
