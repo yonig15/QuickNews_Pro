@@ -12,7 +12,7 @@ namespace QuickNews.Entities
 		public E_Walla(LogManager log) : base(log) { }
 
 		public Queue<M_NewsItem> NewsItems { get; set; }
-        private CancellationTokenSource cts;
+        private bool cts = false;
         private List<M_Rss> wallaRsses = new List<M_Rss>();
 
         public void Init(List<M_Rss> rssesList)
@@ -21,10 +21,9 @@ namespace QuickNews.Entities
             {
                 wallaRsses = rssesList.FindAll(rss => rss.M_WebSite.Id == 4);
                 NewsItems = new Queue<M_NewsItem>();
-                cts = new CancellationTokenSource();
 
-                Task.Run(() => InsertNewsItem(cts.Token), cts.Token);
-                Task.Run(() => CreateNewsItems(cts.Token), cts.Token);
+                //Task.Run(() => InsertNewsItem(cts));
+                Task.Run(() => CreateNewsItems(cts));
 
 				Log.LogEvent(@"Entities \ E_Walla \ Init  ran Successfully - ");
 			}
@@ -35,36 +34,36 @@ namespace QuickNews.Entities
 				throw;
             }
         }
-        public async Task InsertNewsItem(CancellationToken cancellationToken)
-        {
-            while (!cancellationToken.IsCancellationRequested)
-            {
-                try
-                {
-                    if (NewsItems.Count > 0)
-                    {
-                        var newsItem = NewsItems.Dequeue();
-                            DataLayer.Data.NewsItems.Add(newsItem);
-							DataLayer.Data.SaveChanges();
+       // public async Task InsertNewsItem(bool cancellationToken)
+       // {
+       //     while (!cancellationToken)
+       //     {
+       //         try
+       //         {
+       //             if (NewsItems.Count > 0)
+       //             {
+       //                 var newsItem = NewsItems.Dequeue();
+       //                 if (!DataLayer.Data.NewsItems.Any(i => i.ItemId == newsItem.ItemId))
+       //                 {
+       //                     DataLayer.Data.NewsItems.Add(newsItem);
+							//DataLayer.Data.SaveChanges();
 
-							Log.LogEvent(@"Entities \ E_Walla \ InsertNewsItem  ran Successfully - ");
-                        //if (!DataLayer.Data.NewsItems.Any(i => i.ItemId == newsItem.ItemId))
-                        //{
-                        //}
-                    }
-                    await Task.Delay(100, cancellationToken);
-                }
-                catch (Exception ex)
-                {
-                    Log.LogException($@"An Exception occurred while initializing the {ex.StackTrace} : {ex.Message}", ex);
+							//Log.LogEvent(@"Entities \ E_Walla \ InsertNewsItem  ran Successfully - ");
+       //                 }
+       //             }
+       //             await Task.Delay(100);
+       //         }
+       //         catch (Exception ex)
+       //         {
+       //             Log.LogException($@"An Exception occurred while initializing the {ex.StackTrace} : {ex.Message}", ex);
 
-                    throw;
-                }
-            }
-        }
-        public async Task CreateNewsItems(CancellationToken cancellationToken)
+       //             throw;
+       //         }
+       //     }
+       // }
+        public async Task CreateNewsItems(bool cancellationToken)
         {
-            while (!cancellationToken.IsCancellationRequested)
+            while (!cancellationToken)
             {
                 try
                 {
@@ -101,14 +100,15 @@ namespace QuickNews.Entities
                                         };
 
                                         //MainManager.Instance.NewsItems.Enqueue(newsItem);
-                                        NewsItems.Enqueue(newsItem);
-
-                                        Log.LogEvent(@"Entities \ E_Walla \ CreateNewsItems  ran Successfully - ");
+                                        //NewsItems.Enqueue(newsItem);
+									    DataLayer.Data.NewsItems.Add(newsItem);
+									    DataLayer.Data.SaveChanges();
+									    Log.LogEvent(@"Entities \ E_Walla \ CreateNewsItems  ran Successfully - ");
                                     }
                                 }
                             }
                         }
-                        await Task.Delay(3600 * 1000, cancellationToken); //every 60 minutes
+                        await Task.Delay(3600 * 1000); //every 60 minutes
                 }
                 catch (Exception ex)
                 {
@@ -122,7 +122,7 @@ namespace QuickNews.Entities
         {
 			Log.LogEvent(@"Entities \ E_Walla \ Stop  ran Successfully - ");
 
-			cts.Cancel();
+			cts = true;
         }
     }
 }

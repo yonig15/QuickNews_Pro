@@ -7,8 +7,8 @@ namespace QuickNews.Entities
     {
         Queue<M_NewsItem> NewsItems { get; set; }
         void Init(List<M_Rss> rssesList);
-        Task CreateNewsItems(CancellationToken cancellationToken);
-        //Task InsertNewsItem(CancellationToken cancellationToken);
+        Task CreateNewsItems(bool cancellationToken);
+        //Task InsertNewsItem(bool cancellationToken);
         void Stop();
     }
     public class NewsWebsite

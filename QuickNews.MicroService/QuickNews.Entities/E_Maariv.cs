@@ -12,7 +12,7 @@ namespace QuickNews.Entities
 		public E_Maariv(LogManager log) : base(log) { }
 
 		public Queue<M_NewsItem> NewsItems { get; set; }
-        private CancellationTokenSource cts;
+        private bool cts = false;
         private List<M_Rss> maarivRsses = new List<M_Rss>();
 
         public void Init(List<M_Rss> rssesList)
@@ -21,10 +21,9 @@ namespace QuickNews.Entities
             {
                 maarivRsses = rssesList.FindAll(rss => rss.M_WebSite.Id == 3);
                 NewsItems = new Queue<M_NewsItem>();
-                cts = new CancellationTokenSource();
 
-                Task.Run(() => InsertNewsItem(cts.Token), cts.Token);
-                Task.Run(() => CreateNewsItems(cts.Token), cts.Token);
+                //Task.Run(() => InsertNewsItem(cts));
+                Task.Run(() => CreateNewsItems(cts));
 
 				Log.LogEvent(@"Entities \ E_Maariv \ Init  ran Successfully - ");
 			}
@@ -36,37 +35,37 @@ namespace QuickNews.Entities
             }
         }
 
-        public async Task InsertNewsItem(CancellationToken cancellationToken)
+       // public async Task InsertNewsItem(bool cancellationToken)
+       // {
+       //     while (!cancellationToken)
+       //     {
+       //         try
+       //         {
+       //             if (NewsItems.Count > 0)
+       //             {
+       //                 var newsItem = NewsItems.Dequeue();
+       //                 if (!DataLayer.Data.NewsItems.Any(i => i.ItemId == newsItem.ItemId))
+       //                 {
+       //                     DataLayer.Data.NewsItems.Add(newsItem);
+							//DataLayer.Data.SaveChanges();
+
+							//Log.LogEvent(@"Entities \ E_Maariv \ InsertNewsItem  ran Successfully - ");
+       //                 }
+       //             }
+       //             await Task.Delay(100);
+       //         }
+       //         catch (Exception ex)
+       //         {
+       //             Log.LogException($@"An Exception occurred while initializing the {ex.StackTrace} : {ex.Message}", ex);
+
+       //             throw;
+       //         }
+       //     }
+       // }
+
+        public async Task CreateNewsItems(bool cancellationToken)
         {
-            while (!cancellationToken.IsCancellationRequested)
-            {
-                try
-                {
-                    if (NewsItems.Count > 0)
-                    {
-                        var newsItem = NewsItems.Dequeue();
-                            DataLayer.Data.NewsItems.Add(newsItem);
-							DataLayer.Data.SaveChanges();
-
-							Log.LogEvent(@"Entities \ E_Maariv \ InsertNewsItem  ran Successfully - ");
-                        //if (!DataLayer.Data.NewsItems.Any(i => i.ItemId == newsItem.ItemId))
-                        //{
-                        //}
-                    }
-                    await Task.Delay(100, cancellationToken);
-                }
-                catch (Exception ex)
-                {
-                    Log.LogException($@"An Exception occurred while initializing the {ex.StackTrace} : {ex.Message}", ex);
-
-                    throw;
-                }
-            }
-        }
-
-        public async Task CreateNewsItems(CancellationToken cancellationToken)
-        {
-            while (!cancellationToken.IsCancellationRequested)
+            while (!cancellationToken)
             {
                 try
                 {
@@ -106,14 +105,15 @@ namespace QuickNews.Entities
                                         };
 
                                         //MainManager.Instance.NewsItems.Enqueue(newsItem);
-                                        NewsItems.Enqueue(newsItem);
-
-                                        Log.LogEvent(@"Entities \ E_Maariv \ CreateNewsItems  ran Successfully - ");
+                                        //NewsItems.Enqueue(newsItem);
+									    DataLayer.Data.NewsItems.Add(newsItem);
+									    DataLayer.Data.SaveChanges();
+									    Log.LogEvent(@"Entities \ E_Maariv \ CreateNewsItems  ran Successfully - ");
                                     }
                                 }
                             }
                         }
-                        await Task.Delay(3600 * 1000, cancellationToken); //every 60 minutes
+                        await Task.Delay(3600 * 1000); //every 60 minutes
                 }
                 catch (Exception ex)
                 {
@@ -128,7 +128,7 @@ namespace QuickNews.Entities
         {
 			Log.LogEvent(@"Entities \ E_Maariv \ Stop  ran Successfully - ");
 
-			cts.Cancel();
+			cts = true;
         }
     }
 }
