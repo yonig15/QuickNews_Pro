@@ -1,0 +1,22 @@
+.sidenavbar--container {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+
+  /* From https://css.glass */
+  background: rgba(230, 48, 48, 0.43);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.7px);
+  -webkit-backdrop-filter: blur(5.7px);
+  /* border: 1px solid rgba(230, 48, 48, 0.46); */
+}
+
+.sidenavbar--menu {
+  list-style: none;
+}
